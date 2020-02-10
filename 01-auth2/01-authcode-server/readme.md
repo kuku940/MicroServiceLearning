@@ -35,13 +35,11 @@ ost%3A9001%2Fcallback&scope=read_userinfo"
 }
 ```
 
-
 ### 3. 调用API
 
 ```shell script
 curl -X GET http://localhost:8080/api/userinfo -H "authorization: Bearer 36cded80-b6f5-43b7-bdfc-594788a24530"
 ```
-
 
 案例响应：
 
@@ -51,3 +49,5 @@ curl -X GET http://localhost:8080/api/userinfo -H "authorization: Bearer 36cded8
     "email": "bobo@spring2go.com"
 }
 ```
+
+详见[01-authcode-server.postman_collection.json](src/main/resources/01-authcode-server.postman_collection.json)更新请求1中的code即可

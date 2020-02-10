@@ -33,3 +33,5 @@ curl -X GET http://localhost:8080/api/userinfo -H "authorization: Bearer 58a02fd
     "email": "bobo@spring2go.com"
 }
 ```
+
+详见[03-password-server.postman_collection.json](src/main/resources/03-password-server.postman_collection.json)

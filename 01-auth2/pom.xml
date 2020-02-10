@@ -17,6 +17,7 @@
     <module>01-authcode-server</module>
     <module>02-implicit-server</module>
     <module>03-password-server</module>
+    <module>04-client-server</module>
   </modules>
 
   <dependencies>

@@ -27,3 +27,5 @@ curl -X GET http://localhost:8080/api/userinfo -H "authorization: Bearer 0406040
     "email": "bobo@spring2go.com"
 }
 ```
+
+详见[02-implicit-server.postman_collection.json](src/main/resources/02-implicit-server.postman_collection.json)设置请求1中的Bearer Token即可

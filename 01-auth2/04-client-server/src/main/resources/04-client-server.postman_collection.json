@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "57b6e4ab-0f10-47d1-b9a2-f9a750bed059",
+		"name": "04-client-server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "01_get_access_token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2229ea42-6508-4349-80c5-cd511b61d12a",
+						"exec": [
+							"var body = JSON.parse(responseBody);",
+							"",
+							"pm.test(\"Status code is 200\", function () { pm.response.to.have.status(200); });",
+							"",
+							"if(body !== null && body.access_token !== null){",
+							"    pm.environment.set(\"access_token\", body.access_token);",
+							"}",
+							"",
+							"console.log(\"access_token is \" + pm.environment.get(\"access_token\"));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "clientdevops",
+						"password": "112233"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://{{endpoint}}/oauth/token?grant_type=client_credentials&scope=devops",
+					"protocol": "http",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"oauth",
+						"token"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials"
+						},
+						{
+							"key": "scope",
+							"value": "devops"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "02_get_userlist",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "94d6f153-1c62-484f-9b32-86d056731fd6",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{access_token}}"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"url": "http://{{endpoint}}/api/userlist"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
