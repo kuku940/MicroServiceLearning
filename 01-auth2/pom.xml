@@ -18,7 +18,12 @@
     <module>02-implicit-server</module>
     <module>03-password-server</module>
     <module>04-client-server</module>
+    <module>05-client-resttemplate</module>
   </modules>
+
+  <properties>
+    <mysql.connector.version>8.0.16</mysql.connector.version>
+  </properties>
 
   <dependencies>
     <dependency>
