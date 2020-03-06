@@ -16,6 +16,9 @@ Netflix Zuul + Archaius + Apollo组合
 1. 启动01-student-service服务
 2. 启动Apollo配置中心本地版本 `./demo.sh start`
 3. 启动Zuul+Tomcat服务器
+    
+    调整InitializeServletListener初始化方法，添加Deploy_config_url为Apollo相关发布地址
+    
 4. 通过Apollo调整配置项
 
 ## 网关部署架构

@@ -19,6 +19,7 @@
         <module>01-auth2</module>
         <module>02-apollo</module>
         <module>03-zuul</module>
+        <module>04-cat</module>
     </modules>
 
     <properties>
