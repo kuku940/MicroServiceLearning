@@ -8,13 +8,13 @@
 ## 客户端埋点实践
 ![Cat客户端埋点调用图](./resources/images/Cat客户端埋点调用图.png)
 
-通过postman分别调用如下API：
-
-```
-http://localhost:8081/start
-http://localhost:8081/readtimeout
-```
-接着通过Cat查看Transaction和Problem相关日志
+## 项目启动
+1. 启动cat服务端
+2. 分别启动acme-*的四个项目
+3. 通过postman分别调用如下API  
+    http://localhost:8081/start  
+    http://localhost:8081/readtimeout  
+4. 接着通过Cat查看Transaction和Problem相关日志
 
 ## Zuul网关和Cat集成
 
