@@ -1,7 +1,9 @@
 package cn.xiaoyu.zuul.zuulgateway.filters;
 
 import com.netflix.zuul.ZuulFilter;
+import org.springframework.stereotype.Component;
 
+@Component
 public class ErrorFilter extends ZuulFilter {
 
     @Override

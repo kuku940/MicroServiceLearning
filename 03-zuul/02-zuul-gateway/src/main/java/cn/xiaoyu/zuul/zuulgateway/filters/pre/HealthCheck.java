@@ -2,12 +2,14 @@ package cn.xiaoyu.zuul.zuulgateway.filters.pre;
 
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
+import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletResponse;
 
 /**
  * 健康检查
  */
+@Component
 public class HealthCheck extends ZuulFilter {
     @Override
     public String filterType() {

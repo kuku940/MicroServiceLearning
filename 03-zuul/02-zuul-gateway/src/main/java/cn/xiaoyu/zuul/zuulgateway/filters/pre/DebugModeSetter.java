@@ -5,10 +5,12 @@ import com.netflix.config.DynamicPropertyFactory;
 import com.netflix.config.DynamicStringProperty;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
+import org.springframework.stereotype.Component;
 
 /**
  * 设置网关调试模式
  */
+@Component
 public class DebugModeSetter extends ZuulFilter {
     static final DynamicBooleanProperty couldSetDebug = DynamicPropertyFactory.getInstance().getBooleanProperty("zuul.config.set.debug", true);
     static final DynamicBooleanProperty debugRequest = DynamicPropertyFactory.getInstance().getBooleanProperty("zuul.debug.request", false);
