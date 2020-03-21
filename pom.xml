@@ -22,6 +22,7 @@
         <module>04-cat</module>
         <module>05-hystrix</module>
         <module>06-eureka</module>
+        <module>07-prometheus</module>
     </modules>
 
     <properties>
