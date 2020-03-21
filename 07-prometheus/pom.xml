@@ -14,6 +14,8 @@
     <modules>
         <module>01-http-simulator</module>
         <module>02-instrumentation-example</module>
+        <module>03-node-exporter</module>
+        <module>03-springcloud-actuator</module>
     </modules>
 
     <dependencies>
